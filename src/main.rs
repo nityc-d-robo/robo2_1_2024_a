@@ -16,13 +16,13 @@ fn main() -> Result<(), DynError> {
     };
 
     // for debug
-    let _logger = Logger::new("robo1_2024_a");
+    let _logger = Logger::new("robo2_1_2024_a");
     let ctx = Context::new()?;
     let mut selector = ctx.create_selector()?;
-    let node = ctx.create_node("robo1_2024_a", None, Default::default())?;
+    let node = ctx.create_node("robo2_1_2024_a", None, Default::default())?;
 
     let subscriber_cmd = node.create_subscriber::<msg::Twist>("cmd_vel2_1", None)?;
-    let subscriber_joy = node.create_subscriber::<sensor_msgs::msg::Joy>("joy", None)?;
+    let subscriber_joy = node.create_subscriber::<sensor_msgs::msg::Joy>("rjoy2_1", None)?;
 
     selector.add_subscriber(
         subscriber_cmd,
@@ -30,7 +30,7 @@ fn main() -> Result<(), DynError> {
             let motor_power = dtwc_setting.move_chassis(msg.linear.x, msg.linear.y, msg.angular.z);
 
             for i in motor_power.keys() {
-                udp_communication::send_pwm_udp("8081", "192.168.4:8080", *i, motor_power[i]);
+                udp_communication::send_pwm_udp("50004", "192.168.4:60000", *i, motor_power[i]);
             }
         }),
     );
