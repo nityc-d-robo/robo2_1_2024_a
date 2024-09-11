@@ -83,7 +83,7 @@ checksum = "78ca9ab1a0babb1e7d5695e3530886289c18cf2f87ec19a575a0abdce112e3a3"
 [[package]]
 name = "motor_controller"
 version = "0.1.0"
-source = "git+https://github.com/nityc-d-robo/motor_controller?rev=4d09feb4c32cad8f191f9d8d1ae19780f4e08c40#4d09feb4c32cad8f191f9d8d1ae19780f4e08c40"
+source = "git+https://github.com/nityc-d-robo/motor_controller?rev=ce467588a86a9971a9c5e9354e373206d4cbd4ad#ce467588a86a9971a9c5e9354e373206d4cbd4ad"
 dependencies = [
  "rppal",
  "serde",
@@ -226,9 +226,9 @@ dependencies = [
 
 [[package]]
 name = "rppal"
-version = "0.18.0"
+version = "0.19.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ae44db779bd0898047804d22b662a9dc533b142c077b3f7e36003f658835c5b9"
+checksum = "3b37e992f3222e304708025de77c9e395068a347449d0d7164f52d3beccdbd8d"
 dependencies = [
  "libc",
 ]
@@ -399,27 +399,3 @@ name = "windows_x86_64_msvc"
 version = "0.52.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "589f6da84c646204747d1270a2a5661ea66ed1cced2631d546fdfb155959f9ec"
-
-[[patch.unused]]
-name = "director_2024_a"
-version = "0.1.0"
-
-[[patch.unused]]
-name = "robo1_2024_a"
-version = "0.1.0"
-
-[[patch.unused]]
-name = "robo2_1_2024_a"
-version = "0.1.0"
-
-[[patch.unused]]
-name = "robo2_2_1_2024_a"
-version = "0.1.0"
-
-[[patch.unused]]
-name = "robo2_2_2_2024_a"
-version = "0.1.0"
-
-[[patch.unused]]
-name = "robo2_3_2024_a"
-version = "0.1.0"
