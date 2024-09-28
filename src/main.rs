@@ -37,7 +37,6 @@ fn main() -> Result<(), DynError> {
         subscriber_cmd,
         Box::new(move |msg| {
             let motor_power = dtwc_setting.move_chassis(msg.linear.x, msg.linear.y, msg.angular.z);
-
             for i in motor_power.keys() {
                 udp_communication::send_pwm_udp("50004", "192.168.1.4:60000", *i, motor_power[i]);
             }
